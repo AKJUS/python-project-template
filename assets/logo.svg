@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="temple8 logo — Greek temple façade with 8 glyph between pillars">
+  <!--
+    Geometry mirrors the banner temple exactly, scaled to fit 100×100.
+    Banner temple: translate(130,150), spans ±80 wide, apex at -90, stylobate base at +52.
+    Total height = 142, total width = 180. Scale = 90/142 ≈ 0.634 (height-driven).
+    Centred at (50, 50) with slight upward offset so stylobate sits near bottom.
+
+    Colors:
+      parchment-mid  #ede8e0   structure fill
+      stone          #c8c0b8   stylobate mid step, column outlines
+      stone-dark     #a09890   shadows
+      brown-mid      #5c3d1e   pediment/entablature/stylobate outlines
+      gold           #c9a84c   ∞ glyph
+  -->
+
+  <!-- Temple mark: same group as banner, scaled 0.55 and centred at (50,52) -->
+  <g transform="translate(50,52) scale(0.55)">
+
+    <!-- Pediment -->
+    <polygon
+      points="0,-90 80,-54 -80,-54"
+      fill="#ede8e0"
+      stroke="#5c3d1e"
+      stroke-width="1.4"
+      stroke-linejoin="round"
+    />
+    <!-- Right-rake shadow -->
+    <line x1="0" y1="-90" x2="80" y2="-54"
+          stroke="#a09890" stroke-width="1" opacity="0.4"/>
+
+    <!-- 8 glyph between pillars, centred at (0,-7) — mirrors banner -->
+    <path
+      d="M0,-7
+         C0,-15.6 -9.1,-20 -14.7,-20
+         C-20.3,-20 -28,-15.6 -28,-7
+         C-28,1.6 -20.3,6 -14.7,6
+         C-9.1,6 0,1.6 0,-7
+         C0,-15.6 9.1,-20 14.7,-20
+         C20.3,-20 28,-15.6 28,-7
+         C28,1.6 20.3,6 14.7,6
+         C9.1,6 0,1.6 0,-7 Z"
+      fill="none"
+      stroke="#c9a84c"
+      stroke-width="2.2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      transform="rotate(90, 0, -7)"
+    />
+
+    <!-- Entablature -->
+    <rect x="-80" y="-54" width="160" height="12" fill="#ede8e0" stroke="#5c3d1e" stroke-width="0.9"/>
+    <rect x="-80" y="-43" width="160" height="2"  fill="#a09890" opacity="0.3"/>
+
+    <!-- Column 1 -->
+    <rect x="-68" y="-42" width="15" height="70" fill="#ede8e0" stroke="#c8c0b8" stroke-width="0.4"/>
+    <rect x="-55" y="-42" width="3"  height="70" fill="#a09890" opacity="0.2"/>
+    <!-- Column 2 -->
+    <rect x="-28" y="-42" width="15" height="70" fill="#ede8e0" stroke="#c8c0b8" stroke-width="0.4"/>
+    <rect x="-15" y="-42" width="3"  height="70" fill="#a09890" opacity="0.2"/>
+    <!-- Column 3 -->
+    <rect x="13"  y="-42" width="15" height="70" fill="#ede8e0" stroke="#c8c0b8" stroke-width="0.4"/>
+    <rect x="26"  y="-42" width="3"  height="70" fill="#a09890" opacity="0.2"/>
+    <!-- Column 4 -->
+    <rect x="53"  y="-42" width="15" height="70" fill="#ede8e0" stroke="#c8c0b8" stroke-width="0.4"/>
+    <rect x="66"  y="-42" width="3"  height="70" fill="#a09890" opacity="0.2"/>
+
+    <!-- Stylobate — three stepped courses -->
+    <rect x="-80" y="28"  width="160" height="9" fill="#ede8e0" stroke="#5c3d1e" stroke-width="0.7"/>
+    <rect x="-85" y="37"  width="170" height="8" fill="#c8c0b8"/>
+    <rect x="-90" y="45"  width="180" height="7" fill="#a09890" opacity="0.6"/>
+
+  </g>
+</svg>
